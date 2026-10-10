@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كليك ستور | اطلب أونلاين ويوصلك لأي محافظة</title>
+<meta name="description" content="كليك ستور: إلكترونيات، اكسسوارات موبايل، وهدايا. شحن لكل محافظات مصر، دفع عند الاستلام، وإرجاع خلال ١٤ يوم. اطلب على واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ind:#4f46e5; --ind2:#3730a3; --vio:#7c3aed; --lav:#efedff; --amber:#f59e0b;
+  --ink:#171a2e; --muted:#5d6480; --wa:#22c15e; --wa2:#1da851;
+  --line:#e4e5f2; --bg:#f8f8fd; --radius:18px; --shadow:0 10px 30px rgba(79,70,229,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+h1,h2,h3{font-family:'Cairo',sans-serif;line-height:1.35}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+.section{padding:80px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 48px}
+.section-head .kicker{display:inline-block;background:var(--lav);color:var(--ind2);font-weight:700;font-size:.85rem;padding:6px 16px;border-radius:999px;margin-bottom:14px}
+.section-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800}
+.section-head p{color:var(--muted);margin-top:10px}
+nav{position:fixed;inset-inline:0;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Cairo';font-weight:800;font-size:1.15rem;color:var(--ind2)}
+.brand .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--ind),var(--vio));display:grid;place-items:center;font-size:1.2rem;color:#fff}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--muted);font-weight:500;font-size:.95rem}
+.nav-links a:hover{color:var(--ind)}
+.nav-cta{background:var(--ind);color:#fff;font-weight:800;padding:9px 20px;border-radius:999px;font-size:.9rem}
+.burger{display:none;background:none;border:none;color:var(--ind2);font-size:1.5rem;cursor:pointer}
+.hero{padding:150px 0 90px;background:radial-gradient(800px 420px at 88% 0%,rgba(124,58,237,.10),transparent 60%),linear-gradient(170deg,#fff 0%,var(--lav) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:7px 16px;border-radius:999px;font-size:.85rem;color:var(--ind2);font-weight:700}
+.hero h1{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:900;margin:18px 0 14px}
+.hero h1 .hl{background:linear-gradient(120deg,var(--ind),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--muted);font-size:1.08rem;max-width:520px}
+.hero-btns{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;padding:14px 28px;border-radius:14px;font-size:1rem;transition:transform .15s,box-shadow .15s;font-family:'Cairo'}
+.btn-ind{background:linear-gradient(135deg,var(--ind),var(--vio));color:#fff}
+.btn-ind:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(79,70,229,.4)}
+.btn-ghost{background:#fff;color:var(--ind2);border:1.5px solid var(--line)}
+.hero-trust{display:flex;gap:24px;margin-top:34px;flex-wrap:wrap}
+.hero-trust .t{display:flex;align-items:center;gap:9px;font-weight:700;font-size:.9rem}
+.hero-trust .ic{width:36px;height:36px;border-radius:11px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:1.1rem}
+.hero-visual{position:relative}
+.showcase{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px}
+.showcase .row{display:flex;gap:14px;margin-bottom:14px}
+.showcase .row:last-child{margin:0}
+.showcase .item{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
+.showcase .item .pic{font-size:2.2rem}
+.showcase .item b{display:block;font-size:.84rem;margin:6px 0 2px}
+.showcase .item .stars{color:var(--amber);font-size:.75rem;letter-spacing:1px}
+.showcase .item span{color:var(--ind);font-weight:800;font-size:.85rem;display:block}
+.float{position:absolute;background:#fff;border-radius:14px;padding:10px 16px;font-size:.82rem;font-weight:700;box-shadow:0 14px 30px rgba(79,70,229,.2);display:flex;align-items:center;gap:8px;border:1px solid var(--line)}
+.float.f1{top:-18px;inset-inline-start:-12px}
+.float.f2{bottom:-16px;inset-inline-end:-8px}
+.float .dot{width:9px;height:9px;border-radius:50%;background:var(--wa)}
+.cats{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px}
+.chip{background:#fff;border:1.5px solid var(--line);padding:9px 20px;border-radius:999px;font-weight:700;font-size:.9rem;color:var(--muted);cursor:pointer;transition:all .2s}
+.chip.active,.chip:hover{background:var(--ind);color:#fff;border-color:var(--ind)}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.prod:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.prod .thumb{aspect-ratio:1/.82;display:grid;place-items:center;font-size:3.2rem;position:relative}
+.prod .thumb .off{position:absolute;top:12px;inset-inline-start:12px;background:#e0452c;color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
+.prod .body{padding:16px;display:flex;flex-direction:column;flex:1}
+.prod .catname{font-size:.75rem;color:var(--ind);font-weight:700}
+.prod h3{font-size:.93rem;font-weight:800;margin:4px 0 6px}
+.prod .stars{color:var(--amber);font-size:.78rem;letter-spacing:2px}
+.prod .stars span{color:var(--muted);letter-spacing:0;font-size:.75rem}
+.prod .price-row{margin-top:auto;padding-top:8px;display:flex;align-items:baseline;gap:8px}
+.prod .price{font-family:'Cairo';font-weight:900;font-size:1.2rem;color:var(--ind2)}
+.prod .old{font-size:.85rem;color:#b8bdcf;text-decoration:line-through}
+.prod .order{margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#fff;font-weight:800;font-size:.86rem;padding:10px;border-radius:11px}
+.prod .order:hover{background:var(--wa2)}
+.prod .order svg{width:16px;height:16px;fill:#fff}
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:26px 20px;text-align:center}
+.why-card .icon{width:54px;height:54px;margin:0 auto 14px;border-radius:15px;display:grid;place-items:center;font-size:1.6rem;background:linear-gradient(135deg,var(--lav),#dcd8ff)}
+.why-card h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.why-card p{color:var(--muted);font-size:.87rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.rev .stars{color:var(--amber);letter-spacing:3px;margin-bottom:10px}
+.rev p{font-size:.94rem}
+.rev .who{display:flex;align-items:center;gap:11px;margin-top:16px}
+.rev .who .pic{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--lav),#dcd8ff);display:grid;place-items:center;font-size:1.1rem}
+.rev .who b{display:block;font-size:.88rem}
+.rev .who span{font-size:.78rem;color:var(--muted)}
+.ship{background:linear-gradient(160deg,var(--ind2),var(--vio));color:#fff}
+.ship-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.ship h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:14px}
+.ship p{color:#d9d4ff;margin-bottom:12px}
+.ship .govs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.ship .gov{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:5px 13px;border-radius:999px;font-size:.82rem;font-weight:700}
+.ship .panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:28px}
+.ship .panel .row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:.94rem}
+.ship .panel .row:last-child{border:none}
+.ship .panel .row b{color:#ffd257}
+.cta{background:linear-gradient(150deg,var(--ind2),var(--vio));color:#fff;text-align:center}
+.cta h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:900}
+.cta p{color:#d9d4ff;max-width:540px;margin:14px auto 30px}
+.btn-wa{background:var(--wa);color:#fff;font-size:1.08rem;padding:16px 36px;border-radius:16px}
+.btn-wa:hover{background:var(--wa2);transform:translateY(-3px);box-shadow:0 14px 30px rgba(34,193,94,.4)}
+.cta .alt{display:block;margin-top:16px;color:#b6aeff;font-size:.88rem}
+footer{background:#1e1b4b;color:#a5a0e0;padding:28px 0;text-align:center;font-size:.88rem}
+footer b{color:#e0ddff}
+.wa-float{position:fixed;bottom:22px;inset-inline-end:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 26px rgba(34,193,94,.45)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){
+  .prod-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
+  .hero-grid,.ship-grid{grid-template-columns:1fr;gap:44px}
+  .hero{padding-top:126px}
+  .hero-visual{max-width:420px;margin-inline:auto;width:100%}
+  .nav-links{position:fixed;top:66px;inset-inline:0;background:#fff;flex-direction:column;padding:18px 5%;gap:16px;display:none;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+@media (max-width:560px){
+  .prod-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .prod .thumb{font-size:2.4rem}
+  .why-grid{grid-template-columns:1fr}
+  .section{padding:60px 0}
+  .hero-trust{gap:14px}
+  .float.f1{inset-inline-start:0}
+  .float.f2{inset-inline-end:0}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#" class="brand"><span class="logo">🛒</span> كليك ستور</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#products">المنتجات</a></li>
+      <li><a href="#why">ليه إحنا</a></li>
+      <li><a href="#reviews">آراء العملاء</a></li>
+      <li><a href="#shipping">الشحن</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">اطلب الآن</a>
+    <button class="burger" id="burger" aria-label="القائمة">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">🚚 شحن لكل محافظات مصر خلال ٢-٤ أيام</span>
+      <h1>اطلب أونلاين<br><span class="hl">ويوصلك لباب البيت</span></h1>
+      <p class="lead">إلكترونيات، اكسسوارات موبايل، وهدايا مختارة بعناية - أسعار أرخص من السوق وضمان استبدال. اطلب على واتساب وادفع عند الاستلام.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-ind">🛍️ شوف المنتجات</a>
+        <a href="#shipping" class="btn btn-ghost">الشحن والإرجاع</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t"><span class="ic">💵</span> الدفع عند الاستلام</div>
+        <div class="t"><span class="ic">↩️</span> إرجاع خلال ١٤ يوم</div>
+        <div class="t"><span class="ic">⭐</span> ٤.٨ من ٥٬٢٠٠ تقييم</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float f1"><span class="dot"></span> الطلبات مفتوحة الآن</div>
+      <div class="showcase">
+        <div class="row">
+          <div class="item"><div class="pic">🎧</div><b>سماعة بلوتوث</b><div class="stars">★★★★★</div><span>٣٥٠ ج</span></div>
+          <div class="item"><div class="pic">⌚</div><b>ساعة سمارت</b><div class="stars">★★★★★</div><span>٨٩٩ ج</span></div>
+        </div>
+        <div class="row">
+          <div class="item"><div class="pic">🔌</div><b>شاحن سريع</b><div class="stars">★★★★☆</div><span>١٨٠ ج</span></div>
+          <div class="item"><div class="pic">🎁</div><b>بوكس هدايا</b><div class="stars">★★★★★</div><span>٤٥٠ ج</span></div>
+        </div>
+      </div>
+      <div class="float f2">📦 +١٢٬٠٠٠ طلب اتسلم</div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">المنتجات</span>
+      <h2>الأكثر مبيعًا</h2>
+      <p>اختار قسم ودوس «اطلب» على أي منتج - واتساب هيفتح برسالة جاهزة فيها اسم المنتج</p>
+    </div>
+    <div class="cats reveal" id="catChips">
+      <button class="chip active" data-cat="all">الكل</button>
+      <button class="chip" data-cat="elec">إلكترونيات</button>
+      <button class="chip" data-cat="mob">اكسسوارات موبايل</button>
+      <button class="chip" data-cat="gift">هدايا</button>
+    </div>
+    <div class="prod-grid" id="prodGrid"></div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">ليه كليك ستور؟</span>
+      <h2>تجربة شراء من غير وجع دماغ</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="icon">✅</div><h3>منتجات أصلية</h3><p>كل حاجة بضمانها وصورها الحقيقية - اللي في الصورة هو اللي هيوصلك.</p></div>
+      <div class="why-card reveal"><div class="icon">💵</div><h3>ادفع عند الاستلام</h3><p>معاين قبل الدفع في معظم المناطق - تفتح الشحنة وتشوف بنفسك.</p></div>
+      <div class="why-card reveal"><div class="icon">↩️</div><h3>إرجاع ١٤ يوم</h3><p>مش عاجبك المنتج؟ نسترجعه ونرجعلك فلوسك من غير أسئلة كتير.</p></div>
+      <div class="why-card reveal"><div class="icon">💬</div><h3>دعم واتساب سريع</h3><p>رد خلال دقائق في مواعيد العمل - بنتابع طلبك لحد ما يوصل.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">آراء العملاء</span>
+      <h2>كلام ناس اشترت فعلًا</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"طلبت سماعة وكنت خايف من الأونلاين، بس الشحنة وصلت في يومين والمنتج أصلي زي الصور بالظبط. تجربة ممتازة."</p><div class="who"><span class="pic">🧑</span><div><b>محمود س.</b><span>القاهرة</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"بوكس الهدايا كان حلو جدًا والتغليف شيك. ردوا عليا على واتساب في دقايق وحجزولي اللون اللي عايزاه."</p><div class="who"><span class="pic">👩</span><div><b>سلمى ع.</b><span>الإسكندرية</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>"الساعة وصلت للمنصورة في ٣ أيام ومعاينة قبل الدفع. السعر أرخص من المحلات بفرق واضح."</p><div class="who"><span class="pic">👨</span><div><b>كريم م.</b><span>المنصورة</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section ship" id="shipping">
+  <div class="wrap ship-grid">
+    <div class="reveal">
+      <h2>شحن لكل محافظات مصر</h2>
+      <p>بنشحن يوميًا مع شركات شحن معروفة، ورقم تتبع بيتبعتلك على واتساب أول ما الشحنة تتحرك.</p>
+      <div class="govs">
+        <span class="gov">القاهرة</span><span class="gov">الجيزة</span><span class="gov">الإسكندرية</span><span class="gov">الدقهلية</span><span class="gov">الشرقية</span><span class="gov">الغربية</span><span class="gov">أسيوط</span><span class="gov">سوهاج</span><span class="gov">قنا</span><span class="gov">أسوان</span><span class="gov">+ باقي المحافظات</span>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="row"><span>القاهرة والجيزة</span><b>٢-٣ أيام - ٦٠ ج</b></div>
+      <div class="row"><span>الإسكندرية والدلتا</span><b>٢-٤ أيام - ٧٠ ج</b></div>
+      <div class="row"><span>الصعيد</span><b>٣-٥ أيام - ٨٥ ج</b></div>
+      <div class="row"><span>طلبات فوق ٢٬٠٠٠ ج</span><b>شحن مجاني</b></div>
+      <div class="row"><span>الدفع</span><b>كاش عند الاستلام</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="contact">
+  <div class="wrap reveal">
+    <h2>عاجبك منتج؟ اطلبه في رسالة واحدة</h2>
+    <p>ابعتلنا اسم المنتج على واتساب وهنرد بالتأكيد وموعد التسليم خلال دقائق.</p>
+    <a class="btn btn-wa" href="https://wa.me/201000000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%83%D9%84%D9%8A%D9%83%20%D8%B3%D8%AA%D9%88%D8%B1" target="_blank" rel="noopener">🛍️ اطلب على واتساب</a>
+    <span class="alt">من ١٠ صباحًا لـ ١١ مساءً يوميًا - <bdi dir="ltr">0100 000 0000</bdi> (رقم تجريبي)</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>كليك ستور - تسوق أونلاين</b><br>
+    موقع تجريبي لعرض نموذج تصميم - جميع الأسماء والمنتجات والأسعار والأرقام placeholders
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/201000000000" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.5 1.4 5.5 1.4 6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.6 1 1-3.5-.2-.4a9.3 9.3 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+var WA='https://wa.me/201000000000?text=';
+var products=[
+ {e:'🎧',c:'elec',cl:'إلكترونيات',n:'سماعة بلوتوث لاسلكية - عزل ضوضاء',p:350,o:450,off:'-٢٢٪',s:'★★★★★',r:'(١٢٤)',bg:'linear-gradient(135deg,#efedff,#dcd8ff)'},
+ {e:'⌚',c:'elec',cl:'إلكترونيات',n:'ساعة سمارت - شاشة أموليد',p:899,o:1100,off:'-١٨٪',s:'★★★★★',r:'(٨٦)',bg:'linear-gradient(135deg,#e0f2fe,#c8e6fd)'},
+ {e:'🔊',c:'elec',cl:'إلكترونيات',n:'سبيكر بلوتوث محمول',p:420,o:null,s:'★★★★☆',r:'(٥٩)',bg:'linear-gradient(135deg,#fef3c7,#fde68a)'},
+ {e:'🔌',c:'mob',cl:'اكسسوارات موبايل',n:'شاحن سريع ٦٥ وات - منفذين',p:180,o:230,off:'خصم',s:'★★★★☆',r:'(٢٠٣)',bg:'linear-gradient(135deg,#dcfce7,#bbf7d0)'},
+ {e:'📱',c:'mob',cl:'اكسسوارات موبايل',n:'جراب مغناطيسي شفاف + شاشة حماية',p:150,o:null,s:'★★★★★',r:'(١٤٧)',bg:'linear-gradient(135deg,#fce7f3,#fbcfe8)'},
+ {e:'🔋',c:'mob',cl:'اكسسوارات موبايل',n:'باور بانك ٢٠٬٠٠٠ مللي أمبير',p:550,o:650,off:'-١٥٪',s:'★★★★★',r:'(٩٨)',bg:'linear-gradient(135deg,#efedff,#dcd8ff)'},
+ {e:'🎁',c:'gift',cl:'هدايا',n:'بوكس هدايا فاخر - مخصص بالاسم',p:450,o:null,s:'★★★★★',r:'(٦٤)',bg:'linear-gradient(135deg,#fee2e2,#fecaca)'},
+ {e:'🕯️',c:'gift',cl:'هدايا',n:'طقم شموع معطرة فاخر - ٣ قطع',p:280,o:340,off:'خصم',s:'★★★★☆',r:'(٤١)',bg:'linear-gradient(135deg,#fef3c7,#fde68a)'}
+];
+function render(cat){
+  var grid=document.getElementById('prodGrid');
+  grid.innerHTML='';
+  products.filter(function(x){return cat==='all'||x.c===cat;}).forEach(function(x,i){
+    var msg=encodeURIComponent('السلام عليكم، عايز أطلب: '+x.n+' ('+x.p+' ج)');
+    grid.innerHTML+=
+    '<div class="prod reveal in" style="transition-delay:'+(i%4*70)+'ms">'+
+      '<div class="thumb" style="background:'+x.bg+'">'+x.e+(x.off?'<span class="off">'+x.off+'</span>':'')+'</div>'+
+      '<div class="body"><span class="catname">'+x.cl+'</span><h3>'+x.n+'</h3>'+
+      '<div class="stars">'+x.s+' <span>'+x.r+'</span></div>'+
+      '<div class="price-row"><span class="price">'+x.p+' ج</span>'+(x.o?'<span class="old">'+x.o+' ج</span>':'')+'</div>'+
+      '<a class="order" target="_blank" rel="noopener" href="'+WA+msg+'"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.5 1.4 5.5 1.4 6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.6 1 1-3.5-.2-.4a9.3 9.3 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4z"/></svg>اطلب</a>'+
+      '</div></div>';
+  });
+}
+render('all');
+document.querySelectorAll('#catChips .chip').forEach(function(ch){
+  ch.addEventListener('click',function(){
+    document.querySelectorAll('#catChips .chip').forEach(function(c){c.classList.remove('active');});
+    ch.classList.add('active');
+    render(ch.dataset.cat);
+  });
+});
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
+});
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
